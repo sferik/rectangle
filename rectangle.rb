@@ -1,5 +1,9 @@
 # coding: utf-8
 
+class Angle < Object
+
+end
+
 class Rectangle < Object
   attr_accessor :width, :height, :angles, :sides
 
@@ -17,6 +21,19 @@ class Rectangle < Object
 end
 
 require 'rspec'
+
+describe Angle do
+
+  it "starts off with a measure in degrees" do
+    angle = Angle.new(90)
+    expect(angle.to_deg).to eq 90
+  end
+
+  it "can't be negative" do
+    pending "Not quite ready for this yet"
+  end
+
+end
 
 describe Rectangle do
 
