@@ -2,6 +2,14 @@
 
 class Angle < Object
 
+  def initialize(deg)
+    @deg = deg
+  end
+
+  def to_deg
+    @deg
+  end
+
 end
 
 class Rectangle < Object
