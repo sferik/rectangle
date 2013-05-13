@@ -18,4 +18,9 @@ describe Rectangle do
     expect(rect.height).to eq 7
   end
 
+  it "is a polygon" do
+    rect = Rectangle.new(5, 7)
+    expect(rect.sides).to be > 2
+  end
+
 end
