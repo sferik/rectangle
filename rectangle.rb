@@ -39,9 +39,7 @@ describe Rectangle do
 
   it "has four 90° angles" do
     expect(rect.angles.length).to eq 4
-    rect.angles.each do |angle|
-      expect(angle).to eq 90
-    end
+    expect(rect.angles.all?{|angle| angle == 90}).to be_true
   end
 
 end
