@@ -6,6 +6,10 @@ class Rectangle < Object
     @height = height
   end
 
+  def sides
+    4
+  end
+
 end
 
 require 'rspec'
