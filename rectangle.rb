@@ -1,3 +1,5 @@
+# coding: utf-8
+
 class Rectangle < Object
   attr_accessor :width, :height
 
@@ -35,6 +37,13 @@ describe Rectangle do
 
   it "has an area" do
     expect(rect.area).to eq 35
+  end
+
+  it "has four 90° angles" do
+    expect(rect.angles.length).to eq 4
+    rect.angles.each do |angle|
+      expect(angle).to eq 90
+    end
   end
 
 end
