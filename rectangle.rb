@@ -10,6 +10,10 @@ class Rectangle < Object
     4
   end
 
+  def area
+    @width * @height
+  end
+
 end
 
 require 'rspec'
