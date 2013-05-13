@@ -1,16 +1,9 @@
 class Rectangle < Object
+  attr_accessor :width, :height
 
   def initialize(width, height)
     @width = width
     @height = height
-  end
-
-  def width
-    @width
-  end
-
-  def height
-    @height
   end
 
 end
