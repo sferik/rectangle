@@ -27,4 +27,9 @@ describe Rectangle do
     expect(rect.sides).to be > 2
   end
 
+  it "has an area" do
+    rect = Rectangle.new(5, 7)
+    expect(rect.area).to eq 35
+  end
+
 end
