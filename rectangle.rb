@@ -1,16 +1,13 @@
 # coding: utf-8
 
 class Rectangle < Object
-  attr_accessor :width, :height, :angles
+  attr_accessor :width, :height, :angles, :sides
 
   def initialize(width, height)
     @width = width
     @height = height
     @angles = [90, 90, 90, 90]
-  end
-
-  def sides
-    4
+    @sides = 4
   end
 
   def area
