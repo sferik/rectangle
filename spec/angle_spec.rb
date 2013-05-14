@@ -71,4 +71,29 @@ describe Angle do
     expect(angle3 <= angle1).to be_true
   end
 
+  it "is greater than a number if its degrees are greater than that number" do
+    angle = Angle.new(90)
+    expect(angle > 89).to be_true
+  end
+
+  it "is greater than another angle if it has more degrees" do
+    angle1 = Angle.new(90)
+    angle2 = Angle.new(45)
+    expect(angle1 > angle2).to be_true
+  end
+
+  it "is greater than or equal to a number if its degrees are greater than or equal to that number" do
+    angle = Angle.new(90)
+    expect(angle >= 90).to be_true
+    expect(angle >= 80).to be_true
+  end
+
+  it "is greater than or equal to another angle if it has more or an equal number of degrees" do
+    angle1 = Angle.new(90)
+    angle2 = Angle.new(90)
+    angle3 = Angle.new(135)
+    expect(angle1 >= angle2).to be_true
+    expect(angle3 >= angle1).to be_true
+  end
+
 end
