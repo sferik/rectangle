@@ -71,6 +71,11 @@ describe Angle do
     expect(angle.obtuse?).to be_true
   end
 
+  it "correctly converts to radians" do
+    angle = Angle.new(90)
+    expect(angle.to_rad).to eq 1.57079633
+  end
+
 
 end
 
