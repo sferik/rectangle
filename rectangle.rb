@@ -18,6 +18,10 @@ class Angle < Object
     end
   end
 
+  def <=(other)
+    @deg <= other.to_deg
+  end
+
   def ==(other)
     case other
     when Numeric
