@@ -46,4 +46,10 @@ describe Angle do
     expect(angle1 == angle2).to be_true
   end
 
+  it "is less than another angle if it has fewer degrees" do
+    angle1 = Angle.new(45)
+    angle2 = Angle.new(90)
+    expect(angle1 < angle2).to be_true
+  end
+
 end
