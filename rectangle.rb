@@ -3,6 +3,7 @@
 class Angle < Object
 
   def initialize(deg)
+    raise ArgumentError.new("Degrees must be positive") if deg <= 0
     @deg = deg
   end
 
