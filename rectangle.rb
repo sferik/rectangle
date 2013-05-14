@@ -9,7 +9,7 @@ class Angle < Object
 
   def ==(other)
     case other
-    when Fixnum
+    when Numeric
       @deg == other
     when Angle
       @deg == other.to_deg
@@ -41,7 +41,7 @@ class Angle < Object
 end
 
 class Rectangle < Object
-  attr_accessor :width, :height, :angles, :sides
+  attr_reader :width, :height, :angles, :sides
 
   def initialize(width, height)
     @width = width
