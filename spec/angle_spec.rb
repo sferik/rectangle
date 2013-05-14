@@ -4,6 +4,12 @@ require_relative 'spec_helper'
 
 describe Angle do
 
+  it "can be compared to random objects (not numbers or angles)" do
+    angle = Angle.new(90)
+    str = "hello"
+    expect(angle == str).to be_false
+  end
+
   it "starts off with a measure in degrees" do
     angle = Angle.new(90)
     expect(angle.to_deg).to eq 90
