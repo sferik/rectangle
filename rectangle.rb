@@ -1,10 +1,15 @@
 # coding: utf-8
 
 class Angle < Object
+  include Comparable
 
   def initialize(deg)
     raise ArgumentError.new("Degrees must be positive") if deg <= 0
     @deg = deg
+  end
+
+  def <=>(other)
+    @deg <=> other.to_deg
   end
 
   def between?(first, second)
@@ -15,8 +20,6 @@ class Angle < Object
     case other
     when Numeric
       @deg < other
-    when Angle
-      @deg < other.to_deg
     else
       super
     end
@@ -26,8 +29,6 @@ class Angle < Object
     case other
     when Numeric
       @deg <= other
-    when Angle
-      @deg <= other.to_deg
     else
       super
     end
@@ -37,8 +38,6 @@ class Angle < Object
     case other
     when Numeric
       @deg == other
-    when Angle
-      @deg == other.to_deg
     else
       super
     end
@@ -48,8 +47,6 @@ class Angle < Object
     case other
     when Numeric
       @deg > other
-    when Angle
-      @deg > other.to_deg
     else
       super
     end
@@ -59,8 +56,6 @@ class Angle < Object
     case other
     when Numeric
       @deg >= other
-    when Angle
-      @deg >= other.to_deg
     else
       super
     end
