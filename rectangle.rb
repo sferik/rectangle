@@ -7,7 +7,6 @@ class Angle < Object
     @deg = deg
   end
 
-
   def ==(other)
     case other
     when Fixnum
@@ -47,7 +46,7 @@ class Rectangle < Object
   def initialize(width, height)
     @width = width
     @height = height
-    @angles = [90, 90, 90, 90]
+    @angles = [Angle.new(90), Angle.new(90), Angle.new(90), Angle.new(90)]
     @sides = 4
   end
 
