@@ -8,7 +8,14 @@ class Angle < Object
   end
 
   def <(other)
-    @deg < other.to_deg
+    case other
+    when Numeric
+      @deg < other
+    when Angle
+      @deg < other.to_deg
+    else
+      super
+    end
   end
 
   def ==(other)
