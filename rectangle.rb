@@ -11,6 +11,10 @@ class Angle < Object
     @deg
   end
 
+  def right?
+    @deg == 90
+  end
+
 end
 
 class Rectangle < Object
