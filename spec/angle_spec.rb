@@ -35,7 +35,7 @@ describe Angle do
     expect(angle.to_rad).to eq 1.5707963267948966
   end
 
-  it "is equal to an integer with the same number of degrees" do
+  it "is equal to a number with the same number of degrees" do
     angle = Angle.new(90)
     expect(angle == 90).to be_true
   end
@@ -44,6 +44,11 @@ describe Angle do
     angle1 = Angle.new(90)
     angle2 = Angle.new(90)
     expect(angle1 == angle2).to be_true
+  end
+
+  it "is less than a number that it less than its number of degrees" do
+    angle = Angle.new(90)
+    expect(angle < 91).to be_true
   end
 
   it "is less than another angle if it has fewer degrees" do
