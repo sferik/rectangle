@@ -9,53 +9,11 @@ class Angle < Object
   end
 
   def <=>(other)
-    @deg <=> other.to_deg
-  end
-
-  def between?(first, second)
-    (@deg >= first.to_deg) && (@deg <= second.to_deg)
-  end
-
-  def <(other)
     case other
     when Numeric
-      @deg < other
-    else
-      super
-    end
-  end
-
-  def <=(other)
-    case other
-    when Numeric
-      @deg <= other
-    else
-      super
-    end
-  end
-
-  def ==(other)
-    case other
-    when Numeric
-      @deg == other
-    else
-      super
-    end
-  end
-
-  def >(other)
-    case other
-    when Numeric
-      @deg > other
-    else
-      super
-    end
-  end
-
-  def >=(other)
-    case other
-    when Numeric
-      @deg >= other
+      @deg <=> other
+    when self.class
+      @deg <=> other.to_deg
     else
       super
     end
