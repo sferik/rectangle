@@ -93,6 +93,12 @@ describe Angle do
     expect(angle == 90).to be_true
   end
 
+  it "is equal to another angle with the same number of degrees" do
+    angle1 = Angle.new(90)
+    angle2 = Angle.new(90)
+    expect(angle1 == angle2).to be_true
+  end
+
 end
 
 describe Rectangle do
