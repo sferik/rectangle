@@ -44,6 +44,11 @@ describe Angle do
     }.to raise_error(ArgumentError)
   end
 
+  it "is a right angle if it's 90°" do
+    angle = Angle.new(90)
+    expect(angle.right?).to be_true
+  end
+
 end
 
 describe Rectangle do
