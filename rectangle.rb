@@ -19,6 +19,10 @@ class Angle < Object
     @deg < 90
   end
 
+  def obtuse?
+    @deg > 90
+  end
+
 end
 
 class Rectangle < Object
