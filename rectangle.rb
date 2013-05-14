@@ -53,6 +53,11 @@ describe Angle do
     expect(angle.right?).to be_true
   end
 
+  it "is acute if it's less than 90°" do
+    angle = Angle.new(89.9)
+    expect(angle.acute?).to be_true
+  end
+
 end
 
 describe Rectangle do
