@@ -7,6 +7,10 @@ class Angle < Object
     @deg = deg
   end
 
+  def between?(first, second)
+    (@deg >= first.to_deg) && (@deg <= second.to_deg)
+  end
+
   def <(other)
     case other
     when Numeric
@@ -61,7 +65,6 @@ class Angle < Object
       super
     end
   end
-
 
   def to_deg
     @deg

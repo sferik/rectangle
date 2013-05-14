@@ -101,6 +101,7 @@ describe Angle do
     angle2 = Angle.new(90)
     angle3 = Angle.new(135)
     expect(angle2.between?(angle1, angle3)).to be_true
+    expect(angle1.between?(angle2, angle3)).to be_false
   end
 
 end
