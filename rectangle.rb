@@ -80,6 +80,11 @@ describe Angle do
     expect(angle.to_rad).to eq 1.5707963267948966
   end
 
+  it "is equal to an integer with the same number of degrees" do
+    angle = Angle.new(90)
+    expect(angle == 90).to be_true
+  end
+
 end
 
 describe Rectangle do
