@@ -1,7 +1,6 @@
 # coding: utf-8
 
-require_relative '../rectangle'
-require 'rspec'
+require_relative 'spec_helper'
 
 describe Angle do
 
