@@ -62,6 +62,12 @@ describe Angle do
     expect(angle.acute?).to be_true
   end
 
+  it "is obtuse if it's greater than 90°" do
+    angle = Angle.new(90.1)
+    expect(angle.obtuse?).to be_true
+  end
+
+
 end
 
 describe Rectangle do
