@@ -40,6 +40,29 @@ class Angle < Object
     end
   end
 
+  def >(other)
+    case other
+    when Numeric
+      @deg > other
+    when Angle
+      @deg > other.to_deg
+    else
+      super
+    end
+  end
+
+  def >=(other)
+    case other
+    when Numeric
+      @deg >= other
+    when Angle
+      @deg >= other.to_deg
+    else
+      super
+    end
+  end
+
+
   def to_deg
     @deg
   end
