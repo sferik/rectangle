@@ -104,4 +104,12 @@ describe Angle do
     expect(angle1.between?(angle2, angle3)).to be_false
   end
 
+  it "can be sorted in an array" do
+    angle1 = Angle.new(45)
+    angle2 = Angle.new(90)
+    angle3 = Angle.new(135)
+    arr = [angle2, angle3, angle1]
+    expect(arr.sort).to eq [angle1, angle2, angle3]
+  end
+
 end
