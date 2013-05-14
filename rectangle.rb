@@ -12,6 +12,10 @@ class Angle < Object
     case other
     when Fixnum
       @deg == other
+    when Angle
+      @deg == other.to_deg
+    else
+      super
     end
   end
 
