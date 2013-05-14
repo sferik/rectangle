@@ -96,4 +96,11 @@ describe Angle do
     expect(angle3 >= angle1).to be_true
   end
 
+  it "is between one angle and another angle if it is greater than or equal to the first angle and less than or equal to the second angle" do
+    angle1 = Angle.new(45)
+    angle2 = Angle.new(90)
+    angle3 = Angle.new(135)
+    expect(angle2.between?(angle1, angle3)).to be_true
+  end
+
 end
