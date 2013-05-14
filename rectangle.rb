@@ -7,6 +7,14 @@ class Angle < Object
     @deg = deg
   end
 
+
+  def ==(other)
+    case other
+    when Fixnum
+      @deg == other
+    end
+  end
+
   def to_deg
     @deg
   end
