@@ -15,7 +15,7 @@ class Angle < Object
     when self.class
       @deg <=> other.to_deg
     else
-      super
+      false
     end
   end
 
