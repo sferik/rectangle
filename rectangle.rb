@@ -37,8 +37,10 @@ describe Angle do
     expect(angle.to_deg).to eq 90
   end
 
-  it "can't be negative" do
-    pending "Not quite ready for this yet"
+  it "must be positive" do
+    expect {
+      Angle.new(0)
+    }.to raise_error(ArgumentError)
   end
 
 end
