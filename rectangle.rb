@@ -15,6 +15,10 @@ class Angle < Object
     @deg == 90
   end
 
+  def acute?
+    @deg < 90
+  end
+
 end
 
 class Rectangle < Object
