@@ -11,6 +11,10 @@ class Angle < Object
     @deg
   end
 
+  def to_rad
+    @deg * Math::PI / 180
+  end
+
   def right?
     @deg == 90
   end
@@ -73,9 +77,8 @@ describe Angle do
 
   it "correctly converts to radians" do
     angle = Angle.new(90)
-    expect(angle.to_rad).to eq 1.57079633
+    expect(angle.to_rad).to eq 1.5707963267948966
   end
-
 
 end
 
